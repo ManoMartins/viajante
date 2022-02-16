@@ -1,5 +1,7 @@
 import Head from "next/head";
+import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../styles/global";
+import theme from "../styles/theme";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -16,7 +18,9 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }

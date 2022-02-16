@@ -1,29 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-  :root {
-    // brand
-    --orange: ##F25D27;
-    --blue: #123952;
-
-    // texts
-    --title: ##123952;
-    --text: #617480;
-    --support: ##A0ACB3
-
-    // shapes
-    --shape: ##FFFFFF;
-    --shape_dark: #DCE2E6;
-
-    // others
-    --green: #51B853;
-    --blue_low: #DDE9F0;
-
-    // background
-    --background: #DCE2E6;
-
-  }
-
   * {
     margin: 0;
     padding: 0;
@@ -44,10 +21,19 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Barlow', serif;
+    font-family: 'Barlow', sans-serif;
     background: var(--background);
     color: var(--text);
   }
 
-  h1, h2, h3, h4, h5, h6 {}
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--title)
+  }
+
+  button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-family: 'Heebo', sans-serif;
+  }
 `;

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import { Button } from "../components/Atoms/Button";
 
 export default function Home() {
-  return <h1>oi</h1>;
+  return <Button label="Teste" onClick={() => alert("teste")} />;
 }
