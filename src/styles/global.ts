@@ -44,9 +44,10 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Barlow', serif;
     background: var(--background);
     color: var(--text);
   }
+
+  h1, h2, h3, h4, h5, h6 {}
 `;
