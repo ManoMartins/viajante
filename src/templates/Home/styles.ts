@@ -68,4 +68,9 @@ export const Square = styled.div`
   height: 316px;
   background: ${({ theme }) => theme.colors.shape_dark};
   border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.blue_low};
+  }
 `;

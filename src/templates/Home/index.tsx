@@ -1,12 +1,58 @@
 import Image from "next/image";
+import { useMemo } from "react";
 import { useTheme } from "styled-components";
 import { Button } from "../../components/Atoms/Button";
 import { SectionLimiter } from "../../components/Utils/SectionLimiter";
+import { Card } from "../../components/Organisms/Card";
 
 import * as S from "./styles";
 
 export const HomeTemplate = () => {
   const theme = useTheme();
+
+  const cards1 = useMemo(
+    () => [
+      {
+        title: "Florianópolis",
+        subtitle: "98 locais",
+      },
+      {
+        title: "Florianópolis",
+        subtitle: "98 locais",
+      },
+      {
+        title: "Florianópolis",
+        subtitle: "98 locais",
+      },
+      {
+        title: "Florianópolis",
+        subtitle: "98 locais",
+      },
+    ],
+    []
+  );
+
+  const cards2 = useMemo(
+    () => [
+      {
+        title: "Florianópolis",
+        subtitle: "98 locais",
+      },
+      {
+        title: "Blumenau",
+        subtitle: "98 locais",
+      },
+      {
+        title: "Bombinhas",
+        subtitle: "98 locais",
+      },
+      {
+        title: "Águas Mornas",
+        subtitle: "98 locais",
+      },
+    ],
+    []
+  );
 
   return (
     <S.Container>
@@ -42,33 +88,25 @@ export const HomeTemplate = () => {
           </S.Article>
           <S.Aside>
             <S.AsideLeftColumn>
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
+              {cards1.map((card, index) => (
+                <Card
+                  title={card.title}
+                  subtitle={card.subtitle}
+                  key={JSON.stringify(card)}
+                  thumbnail={`https://picsum.photos/100${index}/100${index}`}
+                />
+              ))}
             </S.AsideLeftColumn>
 
             <S.AsideRightColumn>
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
-              <S.Square />
+              {cards2.map((card, index) => (
+                <Card
+                  title={card.title}
+                  subtitle={card.subtitle}
+                  key={JSON.stringify(card)}
+                  thumbnail={`https://picsum.photos/101${index}/101${index}`}
+                />
+              ))}
             </S.AsideRightColumn>
           </S.Aside>
         </S.Main>
