@@ -22,12 +22,12 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Barlow', sans-serif;
-    background: var(--background);
-    color: var(--text);
+    background: #DCE2E6;
+    color: #617480;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: var(--title)
+    color: #123952
   }
 
   button {

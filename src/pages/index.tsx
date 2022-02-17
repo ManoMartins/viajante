@@ -1,7 +1,5 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Button } from "../components/Atoms/Button";
+import { HomeTemplate } from "../templates/Home";
 
 export default function Home() {
-  return <Button label="Teste" onClick={() => alert("teste")} />;
+  return <HomeTemplate />;
 }
