@@ -40,7 +40,37 @@ export const HomeTemplate = () => {
               textColor={theme.colors.shape}
             />
           </S.Article>
-          <S.Aside></S.Aside>
+          <S.Aside>
+            <S.AsideLeftColumn>
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+            </S.AsideLeftColumn>
+
+            <S.AsideRightColumn>
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+              <S.Square />
+            </S.AsideRightColumn>
+          </S.Aside>
         </S.Main>
       </SectionLimiter>
     </S.Container>
