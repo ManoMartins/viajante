@@ -1,9 +1,21 @@
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../styles/global";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import theme from "../styles/theme";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    AOS.init({
+      easing: "ease-out-cubic",
+      once: true,
+      duration: 250,
+    });
+  }, []);
+
   return (
     <>
       <Head>
