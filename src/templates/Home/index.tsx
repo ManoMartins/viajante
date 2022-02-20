@@ -48,11 +48,13 @@ export const HomeTemplate = ({ cities }: HomeTemplateProps) => {
           </S.Article>
           <S.Aside>
             <S.AsideGrid>
-              {cities.map((city, index) => (
+              {cities.map((city) => (
                 <Card
                   title={city.name}
+                  subtitle={`${city.places_count} lugares`}
                   thumbnail={city.thumbnail}
                   key={city.id}
+                  href={`/city/${city.slug}`}
                 />
               ))}
             </S.AsideGrid>

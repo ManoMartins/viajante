@@ -4,13 +4,14 @@ type CardProps = {
   title: string;
   subtitle?: string;
   thumbnail?: string;
+  href?: string;
 };
 
 export const Card = (props: CardProps) => {
-  const { title, subtitle, thumbnail } = props;
+  const { title, subtitle, thumbnail, href } = props;
 
   return (
-    <S.Card className="card">
+    <S.Card href={href} className="card">
       <S.ThumbnailWrapper>
         <S.Thumbnail src={thumbnail} alt={`${title} thumbnail`} layout="fill" />
       </S.ThumbnailWrapper>

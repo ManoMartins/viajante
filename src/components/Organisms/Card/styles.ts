@@ -1,10 +1,12 @@
 import NextImage from "next/image";
 import styled from "styled-components";
 
-export const Card = styled.div`
+export const Card = styled.a`
   display: flex;
   flex-direction: column;
   width: 100%;
+  text-decoration: none;
+  color: #617480;
 `;
 
 export const ThumbnailWrapper = styled.figure`

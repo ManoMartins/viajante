@@ -7,6 +7,7 @@ type HomeProps = {
 };
 
 export default function Home({ allCities }: HomeProps) {
+  console.log(allCities);
   return <HomeTemplate cities={allCities} />;
 }
 

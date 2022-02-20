@@ -52,7 +52,7 @@ export const AsideGrid = styled.div`
   width: 100%;
   gap: 1rem;
 
-  div.card:nth-child(even) {
+  a.card:nth-child(even) {
     transform: translateY(4rem);
   }
 `;

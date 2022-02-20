@@ -7,6 +7,8 @@ export const GET_ALL_CITIES = gql`
       name
       description
       thumbnail
+      places_count
+      slug
     }
   }
 `;
