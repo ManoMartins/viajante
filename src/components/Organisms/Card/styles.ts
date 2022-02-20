@@ -10,13 +10,15 @@ export const Card = styled.a`
 `;
 
 export const ThumbnailWrapper = styled.figure`
-  height: 175px;
-
   width: 100%;
   height: 220px;
   overflow: hidden;
   position: relative;
   border-radius: 5px 5px 0 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    height: 160px;
+  }
 `;
 
 export const Thumbnail = styled(NextImage)`
@@ -54,6 +56,16 @@ export const Infos = styled.div`
 
 export const Title = styled.h3`
   font-size: 1.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    max-width: 12ch;
+  }
+  "
+  " @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    max-width: 15ch;
+  }
 `;
 
 export const Subtitle = styled.sub`

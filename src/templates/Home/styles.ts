@@ -16,6 +16,10 @@ export const Header = styled.header`
 export const Main = styled.main`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    flex-direction: column;
+  }
 `;
 
 export const Article = styled.article`
@@ -23,6 +27,12 @@ export const Article = styled.article`
   position: sticky;
   height: 472px;
   top: 8.5rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    position: initial;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
 `;
 
 export const Title = styled.h2`
@@ -44,6 +54,10 @@ export const Aside = styled.aside`
   width: 640px;
   position: relative;
   padding-bottom: 1rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 100%;
+  }
 `;
 
 export const AsideGrid = styled.div`
