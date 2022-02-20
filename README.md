@@ -1,3 +1,14 @@
+## 🔨 Tools
+
+- [Typescript](https://www.typescriptlang.org/)
+- [ReactJS](https://pt-br.reactjs.org/)
+- [NextJS](https://nextjs.org/)
+- [JSON GraphQL Server](https://github.com/marmelab/json-graphql-server)
+- [FakerJS](https://github.com/faker-js/faker)
+- [Styled Components](https://styled-components.com/)
+- [AOS](https://github.com/michalsnik/aos)
+- [GitCommitEmoji](https://gist.github.com/parmentf/035de27d6ed1dce0b36a)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
