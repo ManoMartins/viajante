@@ -3,6 +3,8 @@
 - [Typescript](https://www.typescriptlang.org/)
 - [ReactJS](https://pt-br.reactjs.org/)
 - [NextJS](https://nextjs.org/)
+- [GraphQL](https://graphql.org/)
+- [GraphQL Request](https://github.com/prisma-labs/graphql-request)
 - [JSON GraphQL Server](https://github.com/marmelab/json-graphql-server)
 - [FakerJS](https://github.com/faker-js/faker)
 - [Styled Components](https://styled-components.com/)
