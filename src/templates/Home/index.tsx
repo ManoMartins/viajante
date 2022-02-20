@@ -1,7 +1,6 @@
 import Image from "next/image";
-import { useMemo } from "react";
+import Link from "next/link";
 import { useTheme } from "styled-components";
-import { Button } from "../../components/Atoms/Button";
 import { SectionLimiter } from "../../components/Utils/SectionLimiter";
 import { Card } from "../../components/Organisms/Card";
 
@@ -19,12 +18,16 @@ export const HomeTemplate = ({ cities }: HomeTemplateProps) => {
     <S.Container>
       <SectionLimiter>
         <S.Header>
-          <Image
-            src="/logo.svg"
-            width="126px"
-            height="26px"
-            alt="Logo Traveler"
-          />
+          <Link href="/">
+            <a data-aos="fade-right" data-aos-duration="500">
+              <Image
+                src="/logo.svg"
+                width="126px"
+                height="26px"
+                alt="Logo Traveler"
+              />
+            </a>
+          </Link>
           <ButtonLink
             label="Acesso restrito"
             href="/login"
@@ -33,24 +36,26 @@ export const HomeTemplate = ({ cities }: HomeTemplateProps) => {
         </S.Header>
         <S.Main>
           <S.Article>
-            <S.Title>
+            <S.Title data-aos="fade-right" data-aos-duration="500">
               Viva uma
               <br />
               grande <br />
               aventura
             </S.Title>
-            <S.Text>
+            <S.Text data-aos="fade-right" data-aos-duration="600">
               Descubra locais incríveis para se
               <br />
               visitar em cidades maravilhosas de <br /> Santa Catarina.
             </S.Text>
-            <ButtonLink
-              label="Descobrir todos os lugares"
-              size="lg"
-              href="/cities"
-              bgColor={theme.colors.orange}
-              textColor={theme.colors.shape}
-            />
+            <div data-aos="fade-right" data-aos-duration="1000">
+              <ButtonLink
+                label="Descobrir todos os lugares"
+                size="lg"
+                href="/cities"
+                bgColor={theme.colors.orange}
+                textColor={theme.colors.shape}
+              />
+            </div>
           </S.Article>
           <S.Aside>
             <S.AsideGrid data-aos="fade-up" data-aos-duration="500">
