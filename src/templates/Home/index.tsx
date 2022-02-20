@@ -6,6 +6,7 @@ import { SectionLimiter } from "../../components/Utils/SectionLimiter";
 import { Card } from "../../components/Organisms/Card";
 
 import * as S from "./styles";
+import { ButtonLink } from "../../components/Atoms/ButtonLink";
 
 type HomeTemplateProps = {
   cities: any;
@@ -24,7 +25,11 @@ export const HomeTemplate = ({ cities }: HomeTemplateProps) => {
             height="26px"
             alt="Logo Traveler"
           />
-          <Button label="Acesso restrito" onClick={() => alert("teste")} />
+          <ButtonLink
+            label="Acesso restrito"
+            href="/login"
+            onClick={() => alert("teste")}
+          />
         </S.Header>
         <S.Main>
           <S.Article>
@@ -39,9 +44,10 @@ export const HomeTemplate = ({ cities }: HomeTemplateProps) => {
               <br />
               visitar em cidades maravilhosas de <br /> Santa Catarina.
             </S.Text>
-            <Button
+            <ButtonLink
               label="Descobrir todos os lugares"
               size="lg"
+              href="/cities"
               bgColor={theme.colors.orange}
               textColor={theme.colors.shape}
             />
@@ -54,7 +60,7 @@ export const HomeTemplate = ({ cities }: HomeTemplateProps) => {
                   subtitle={`${city.places_count} lugares`}
                   thumbnail={city.thumbnail}
                   key={city.id}
-                  href={`/city/${city.slug}`}
+                  href={`/cities/${city.slug}`}
                 />
               ))}
             </S.AsideGrid>
