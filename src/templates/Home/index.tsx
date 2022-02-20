@@ -7,52 +7,12 @@ import { Card } from "../../components/Organisms/Card";
 
 import * as S from "./styles";
 
-export const HomeTemplate = () => {
+type HomeTemplateProps = {
+  cities: any;
+};
+
+export const HomeTemplate = ({ cities }: HomeTemplateProps) => {
   const theme = useTheme();
-
-  const cards1 = useMemo(
-    () => [
-      {
-        title: "Florianópolis",
-        subtitle: "98 locais",
-      },
-      {
-        title: "Florianópolis",
-        subtitle: "98 locais",
-      },
-      {
-        title: "Florianópolis",
-        subtitle: "98 locais",
-      },
-      {
-        title: "Florianópolis",
-        subtitle: "98 locais",
-      },
-    ],
-    []
-  );
-
-  const cards2 = useMemo(
-    () => [
-      {
-        title: "Florianópolis",
-        subtitle: "98 locais",
-      },
-      {
-        title: "Blumenau",
-        subtitle: "98 locais",
-      },
-      {
-        title: "Bombinhas",
-        subtitle: "98 locais",
-      },
-      {
-        title: "Águas Mornas",
-        subtitle: "98 locais",
-      },
-    ],
-    []
-  );
 
   return (
     <S.Container>
@@ -87,27 +47,15 @@ export const HomeTemplate = () => {
             />
           </S.Article>
           <S.Aside>
-            <S.AsideLeftColumn>
-              {cards1.map((card, index) => (
+            <S.AsideGrid>
+              {cities.map((city, index) => (
                 <Card
-                  title={card.title}
-                  subtitle={card.subtitle}
-                  key={JSON.stringify(card)}
-                  thumbnail={`https://picsum.photos/100${index}/100${index}`}
+                  title={city.name}
+                  thumbnail={city.thumbnail}
+                  key={city.id}
                 />
               ))}
-            </S.AsideLeftColumn>
-
-            <S.AsideRightColumn>
-              {cards2.map((card, index) => (
-                <Card
-                  title={card.title}
-                  subtitle={card.subtitle}
-                  key={JSON.stringify(card)}
-                  thumbnail={`https://picsum.photos/101${index}/101${index}`}
-                />
-              ))}
-            </S.AsideRightColumn>
+            </S.AsideGrid>
           </S.Aside>
         </S.Main>
       </SectionLimiter>

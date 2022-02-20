@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   background: ${({ theme }) => theme.colors.shape};
-  padding: 0 1rem;
+  padding: 0 1rem 4rem 1rem;
 `;
 
 export const Header = styled.header`
@@ -44,6 +44,17 @@ export const Aside = styled.aside`
   width: 640px;
   position: relative;
   padding-bottom: 1rem;
+`;
+
+export const AsideGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 1rem;
+
+  div.card:nth-child(even) {
+    transform: translateY(4rem);
+  }
 `;
 
 export const AsideLeftColumn = styled.div`

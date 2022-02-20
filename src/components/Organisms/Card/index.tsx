@@ -10,7 +10,7 @@ export const Card = (props: CardProps) => {
   const { title, subtitle, thumbnail } = props;
 
   return (
-    <S.Card>
+    <S.Card className="card">
       <S.ThumbnailWrapper>
         <S.Thumbnail src={thumbnail} alt={`${title} thumbnail`} layout="fill" />
       </S.ThumbnailWrapper>
