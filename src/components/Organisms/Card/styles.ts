@@ -23,13 +23,13 @@ export const Thumbnail = styled(NextImage)`
   position: absolute;
   object-fit: cover;
 
-  background: #121214;
+  background: #a9b0b8;
   background-image: linear-gradient(
     to right,
-    #121214 0%,
-    #171719 20%,
-    #121214 40%,
-    #121214 100%
+    #a9b0b8 0%,
+    #b5bfc9 20%,
+    #a9b0b8 40%,
+    #a9b0b8 100%
   );
   background-size: 80rem 14rem;
   animation: placeholderShimmer 1s linear infinite forwards;
