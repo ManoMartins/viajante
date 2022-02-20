@@ -56,32 +56,3 @@ export const AsideGrid = styled.div`
     transform: translateY(4rem);
   }
 `;
-
-export const AsideLeftColumn = styled.div`
-  display: grid;
-  width: 50%;
-
-  div + div {
-    margin-top: -4rem;
-  }
-`;
-
-export const AsideRightColumn = styled.div`
-  display: grid;
-  width: 50%;
-
-  gap: 1rem;
-  margin-top: 76px;
-`;
-
-export const Square = styled.div`
-  width: 100%;
-  height: 316px;
-  background: ${({ theme }) => theme.colors.shape_dark};
-  border-radius: 5px;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    background: ${({ theme }) => theme.colors.blue_low};
-  }
-`;

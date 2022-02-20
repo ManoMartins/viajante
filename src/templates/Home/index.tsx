@@ -52,8 +52,8 @@ export const HomeTemplate = ({ cities }: HomeTemplateProps) => {
               textColor={theme.colors.shape}
             />
           </S.Article>
-          <S.Aside data-aos="fade-left" data-aos-duration="500">
-            <S.AsideGrid>
+          <S.Aside>
+            <S.AsideGrid data-aos="fade-up" data-aos-duration="500">
               {cities.map((city) => (
                 <Card
                   title={city.name}
