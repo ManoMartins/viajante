@@ -1,21 +1,9 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
-  background: ${({ theme }) => theme.colors.shape};
-  padding: 0 1rem 4rem 1rem;
-`;
-
-export const Header = styled.header`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 5rem;
-`;
-
 export const Main = styled.main`
   display: flex;
   justify-content: space-between;
+  padding: 0 1rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     flex-direction: column;
@@ -32,11 +20,12 @@ export const Article = styled.article`
     position: initial;
     margin-top: 4rem;
     margin-bottom: 4rem;
+    height: auto;
   }
 `;
 
 export const Title = styled.h2`
-  font-size: 80px;
+  font-size: 5rem;
   font-weight: 600;
   margin-bottom: 48px;
   line-height: 74px;
@@ -68,5 +57,13 @@ export const AsideGrid = styled.div`
 
   a.card:nth-child(even) {
     transform: translateY(4rem);
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    grid-template-columns: repeat(1, 1fr);
+
+    a.card:nth-child(even) {
+      transform: translateY(0);
+    }
   }
 `;
