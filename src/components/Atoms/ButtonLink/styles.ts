@@ -15,6 +15,7 @@ export const Container = styled.a<ButtonPropsProps>`
   transition: all 0.3s ease-in-out;
 
   text-decoration: none;
+  white-space: nowrap;
 
   &:hover {
     filter: brightness(0.95);
@@ -32,5 +33,9 @@ export const Container = styled.a<ButtonPropsProps>`
     css`
       padding: 23px 56px;
       font-size: 1.125rem;
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        padding: 11px 32px;
+      }
     `}
 `;
