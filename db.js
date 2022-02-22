@@ -1,7 +1,7 @@
 const { faker } = require("@faker-js/faker");
 
 module.exports = {
-  cities: Array.from(Array(50).keys()).map((i) => {
+  cities: Array.from(Array(100).keys()).map((i) => {
     const name = faker.address.city();
 
     return {

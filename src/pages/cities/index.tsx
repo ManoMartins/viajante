@@ -8,15 +8,15 @@ type Cities = {
 } & NextPage;
 
 export default function Cities({ allCities }: Cities) {
-  return <CitiesTemplate />;
+  return <CitiesTemplate cities={allCities} />;
 }
 
 export const getStaticProps = async () => {
   const { allCities } = await client.request<any>(GET_ALL_CITIES);
 
-  console.log(allCities);
-
   return {
-    props: {},
+    props: {
+      allCities,
+    },
   };
 };

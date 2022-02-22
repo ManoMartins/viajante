@@ -11,7 +11,7 @@ export const Card = styled.a`
 
 export const ThumbnailWrapper = styled.figure`
   width: 100%;
-  height: 220px;
+  height: 200px;
   overflow: hidden;
   position: relative;
   border-radius: 5px 5px 0 0;
