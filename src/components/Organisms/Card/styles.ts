@@ -58,14 +58,7 @@ export const Title = styled.h3`
   font-size: 1.3rem;
   overflow: hidden;
   text-overflow: ellipsis;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    max-width: 12ch;
-  }
-  "
-  " @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    max-width: 15ch;
-  }
+  white-space: nowrap;
 `;
 
 export const Subtitle = styled.sub`
