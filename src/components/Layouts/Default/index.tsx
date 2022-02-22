@@ -10,17 +10,11 @@ type LayoutDefaultProps = {
 
 export const LayoutDefault = (props: LayoutDefaultProps) => {
   const { children, headerProps } = props;
-  const { headerGap } = headerProps || {};
-
-  const { asPath } = useRouter();
 
   return (
-    <SectionLimiter>
-      <Header
-        headerGap={headerGap}
-        variant={asPath === "/" ? "transparent" : "default"}
-      />
-      {children}
-    </SectionLimiter>
+    <>
+      <Header {...headerProps} />
+      <SectionLimiter>{children}</SectionLimiter>
+    </>
   );
 };
