@@ -17,6 +17,7 @@ export const HomeTemplate = ({ cities }: HomeTemplateProps) => {
     <LayoutDefault
       headerProps={{
         headerGap: "1rem",
+        variant: "transparent",
       }}
     >
       <S.Main>

@@ -1,14 +1,14 @@
 import { NextPage } from "next";
 import client from "../../graphql/client";
 import { GET_ALL_CITIES } from "../../graphql/queries";
-import { LayoutDefault } from "../../components/Layouts/Default";
+import { CitiesTemplate } from "../../templates/Cities";
 
 type Cities = {
   allCities: any;
 } & NextPage;
 
 export default function Cities({ allCities }: Cities) {
-  return <LayoutDefault>Teste</LayoutDefault>;
+  return <CitiesTemplate />;
 }
 
 export const getStaticProps = async () => {
